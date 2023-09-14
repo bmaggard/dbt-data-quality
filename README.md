@@ -8,6 +8,7 @@ conda activate dbtdq
 pip install -r requirements.txt
 dbt seed
 dbt run
+dbt deps
 ```
 
 `.env` file structure:
