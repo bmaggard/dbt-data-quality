@@ -97,4 +97,9 @@ id,user_id,order_date,status
 96,90,2018-04-06,placed
 97,89,2018-04-07,placed
 98,41,2018-04-07,placed
+98,41,2018-04-07,placed
 99,85,2018-04-09,placed
+100,85,2118-04-09,placed
+101,1000,2018-04-09,placed
+102,89,2018-04-08,wrong_status
+103,90,2018-04-07,placed
