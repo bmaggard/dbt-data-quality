@@ -1,17 +1,20 @@
 # dbt-data-quality
 Data quality checks in your dbt flow.
 
-## Environment setup
-```
-conda create -n dbtdq python=3.9
-conda activate dbtdq
-pip install -r requirements.txt
-dbt seed
-dbt run
-dbt deps
-```
+This repository helps you understand the different data quality checks available in [dbt](https://www.getdbt.com/).
 
-`.env` file structure:
+You can clone the repository, create a `supabase` account, write the `.env` file and run the commands according to the environment setup, and get an environment where you can practice testing with dbt **for free**.
+
+## Author
+I'm Bruno Gonzalez from 🇺🇾, working as a senior data engineer, and writing about data quality and data engineering.
+- [Substack](https://dataqualityguru.substack.com/)
+- [LinkedIn](https://www.linkedin.com/in/brunouy/)
+
+## Tools
+Postgres database: [supabase](https://supabase.com/). Create a free account and get the credentials to create the `.env` file.
+
+## Environment setup
+Create `.env` file with the following structure:
 ```
 POSTGRES_HOST=<postgres_host>
 POSTGRES_USER=<postgres_user>
@@ -19,8 +22,16 @@ POSTGRES_PASSWORD=<postgres_password>
 POSTGRES_DATABASE=<postgres_database>
 ```
 
-## Tools
-Postgres database: [supabase](https://supabase.com/).
+Commands to setup the environment:
+```
+conda create -n dbtdq python=3.9
+conda activate dbtdq
+pip install -r requirements.txt
+export $(cat .env | xargs)
+dbt seed
+dbt run
+dbt deps
+```
 
 ## Example
 Modified from dbt-labs [jaffle_shop](https://github.com/dbt-labs/jaffle_shop).
